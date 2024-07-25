@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TwnTw-WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d918fce3668bb624ea9f02638006a146a6c34b6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TwnTw-WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TwnTw-WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
