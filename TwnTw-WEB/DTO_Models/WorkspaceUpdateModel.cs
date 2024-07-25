@@ -2,8 +2,9 @@
 {
     public class WorkspaceUpdateModel
     {
-            public string WSName { get; set; }
-            public string Description { get; set; }
-            public string Status { get; set; }
+        public Guid WSId { get; set; }
+        public string WSName { get; set; }
+        public string Description { get; set; }
+        public string Status { get; set; }
     }
 }
