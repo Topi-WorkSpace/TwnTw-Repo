@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {}
+    "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {}
   },
   "projects": {
-    "D:\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {
+    "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+        "projectUniqueName": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
         "projectName": "TwnTw-WEB",
-        "projectPath": "D:\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
-        "packagesPath": "C:\\Users\\Phan Ky\\.nuget\\packages\\",
-        "outputPath": "D:\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
+        "projectPath": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+        "packagesPath": "C:\\Users\\Topi\\.nuget\\packages\\",
+        "outputPath": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Phan Ky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Topi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +50,10 @@
               "target": "Package",
               "version": "[12.0.1, )"
             },
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.7, )"
@@ -62,6 +67,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [
