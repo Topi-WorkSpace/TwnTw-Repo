@@ -1,7 +1,40 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\TwnTw-Repo\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\modelprofile\\memberdetailprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\modelprofile\\memberdetailprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\dto_models\\taskdetailcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\dto_models\\taskdetailcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\dto_models\\memberdetailcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\dto_models\\memberdetailcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\dto_models\\taskdetailupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\dto_models\\taskdetailupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\dto_models\\workspaceupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\dto_models\\workspaceupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\dto_models\\userupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\dto_models\\userupdatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\twntw-repo\\twntw-web\\models\\memberdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\models\\memberdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +42,119 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\Program.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Program.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\Program.cs",
+              "RelativeToolTip": "TwnTw-WEB\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:28:03.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MemberDetailProfile.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\MemberDetailProfile.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\ModelProfile\\MemberDetailProfile.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\MemberDetailProfile.cs",
+              "RelativeToolTip": "TwnTw-WEB\\ModelProfile\\MemberDetailProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:26:34.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TaskDetailCreateModel.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\TaskDetailCreateModel.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\DTO_Models\\TaskDetailCreateModel.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\TaskDetailCreateModel.cs",
+              "RelativeToolTip": "TwnTw-WEB\\DTO_Models\\TaskDetailCreateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:25:06.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskDetailUpdateModel.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\TaskDetailUpdateModel.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\DTO_Models\\TaskDetailUpdateModel.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\TaskDetailUpdateModel.cs",
+              "RelativeToolTip": "TwnTw-WEB\\DTO_Models\\TaskDetailUpdateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:24:58.703Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WorkspaceUpdateModel.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\WorkspaceUpdateModel.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\DTO_Models\\WorkspaceUpdateModel.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\WorkspaceUpdateModel.cs",
+              "RelativeToolTip": "TwnTw-WEB\\DTO_Models\\WorkspaceUpdateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:24:55.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MemberDetailCreateModel.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\MemberDetailCreateModel.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\DTO_Models\\MemberDetailCreateModel.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\MemberDetailCreateModel.cs",
+              "RelativeToolTip": "TwnTw-WEB\\DTO_Models\\MemberDetailCreateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:21:46.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserUpdateModel.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\UserUpdateModel.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\DTO_Models\\UserUpdateModel.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\DTO_Models\\UserUpdateModel.cs",
+              "RelativeToolTip": "TwnTw-WEB\\DTO_Models\\UserUpdateModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:24:50.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MemberDetail.cs",
+              "DocumentMoniker": "D:\\TwnTw-Repo\\TwnTw-WEB\\Models\\MemberDetail.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Models\\MemberDetail.cs",
+              "ToolTip": "D:\\TwnTw-Repo\\TwnTw-WEB\\Models\\MemberDetail.cs",
+              "RelativeToolTip": "TwnTw-WEB\\Models\\MemberDetail.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T15:23:45.684Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             }
           ]
         }
