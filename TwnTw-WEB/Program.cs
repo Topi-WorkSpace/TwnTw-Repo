@@ -11,6 +11,7 @@ builder.Services.AddAutoMapper(typeof(MemberDetailProfile));
 builder.Services.AddAutoMapper(typeof(TaskDetailProfile));
 builder.Services.AddAutoMapper(typeof(WorkspaceProfile));
 builder.Services.AddAutoMapper(typeof(UserProfile));
+builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); });
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,7 +26,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+//session
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(
