@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TwnTw_WEB.Models.TaskDetail>
+
+@{
+    ViewData["Title"] = "ListTaskDetail";
+}
+
+<h1>ListTaskDetail</h1>
+
+<p>
+    <a asp-action="CreateTaskDetail">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Users)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Users.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                <a asp-action="UpdateTaskDetail" asp-route-id="@item.TaskDetailId">Update</a> |
+                
+                <a asp-action="DeleteTaskDetail" asp-route-id="@item.TaskDetailId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

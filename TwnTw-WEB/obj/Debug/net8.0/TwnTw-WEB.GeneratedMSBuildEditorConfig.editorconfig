@@ -1,47 +1,75 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TwnTw_WEB
 build_property.RootNamespace = TwnTw_WEB
-build_property.ProjectDir = D:\TwnTw-Repo\TwnTw-WEB\
+build_property.ProjectDir = D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\TwnTw-Repo\TwnTw-WEB
+build_property.MSBuildProjectDirectory = D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/Home/Index.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/Home/Privacy.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/Shared/Error.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/_ViewImports.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/TaskDetail/CreateTaskDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0RldGFpbFxDcmVhdGVUYXNrRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/TaskDetail/ListTaskDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0RldGFpbFxMaXN0VGFza0RldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/TaskDetail/UpdateTaskDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFza0RldGFpbFxVcGRhdGVUYXNrRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/User/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGVVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/_ViewStart.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/TwnTw-Repo/TwnTw-WEB/Views/Shared/_Layout.cshtml]
+[D:/Learn/Linh tinh/TwnTw-Repo/TwnTw-WEB/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1s5w6qtduk
