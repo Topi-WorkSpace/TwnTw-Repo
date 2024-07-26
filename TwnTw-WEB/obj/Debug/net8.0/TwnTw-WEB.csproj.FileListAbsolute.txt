@@ -647,3 +647,4 @@ D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB\obj\Debug\net8.0\refint\TwnTw-WEB.dll
 D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB\obj\Debug\net8.0\TwnTw-WEB.pdb
 D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB\obj\Debug\net8.0\TwnTw-WEB.genruntimeconfig.cache
 D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB\obj\Debug\net8.0\ref\TwnTw-WEB.dll
+D:\Learn\Linh tinh\TwnTw-Repo\TwnTw-WEB\bin\Debug\net8.0\BCrypt.Net.dll
