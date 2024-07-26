@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TwnTw_WEB.Models.MemberDetail>
+
+@{
+    ViewData["Title"] = "ListMemberDetail";
+}
+
+<h1>ListMemberDetail</h1>
+
+<p>
+    <a asp-action="CreateMemberDetail">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Workspaces)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Role)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkSpaceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Role)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MemberDetailId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.MemberDetailId">Details</a> |
+                    <a asp-action="DeleteMemberDetail" asp-route-id="@item.MemberDetailId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

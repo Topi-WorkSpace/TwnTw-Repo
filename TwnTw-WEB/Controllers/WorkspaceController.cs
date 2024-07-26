@@ -28,8 +28,21 @@ namespace TwnTw_WEB.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWorkspace(WorkspaceCreateModel workspaceCreateModel)
         {
-            await _context.Workspaces.AddAsync(_mapper.Map<Workspace>(workspaceCreateModel));
+            //tạo workspace
+            var wsp = _mapper.Map<Workspace>(workspaceCreateModel);
+            await _context.Workspaces.AddAsync(_mapper.Map<Workspace>(wsp));
             await _context.SaveChangesAsync();
+
+            //Tạo memberDetail cho người tạo workspace (role leader)
+            MemberDetail memberDetail = new MemberDetail
+            {
+                MemberDetailId = Guid.NewGuid(),
+                WorkSpaceId = wsp.WSId,
+                Role = "Leader",
+                Status = "Accepted",
+                UserId = Guid.Parse(HttpContext.Session.GetString("UserId"))
+            };
+            await _context.MemberDetails.AddAsync(memberDetail);
             return RedirectToAction("ListWorkspace");
         }
 
@@ -61,8 +74,6 @@ namespace TwnTw_WEB.Controllers
 
 
         //Trả view delete workspace
-        
-
         [HttpGet]
         public async Task<IActionResult> ConfirmDelete(Guid id)
         {

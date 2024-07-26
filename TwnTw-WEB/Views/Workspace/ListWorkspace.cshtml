@@ -38,8 +38,8 @@
             </td>
             <td>
                 <a asp-controller="Workspace" asp-action="UpdateWorkspace" asp-route-id="@item.WSId">Edit</a> |
-                <a asp-controller="Workspace" asp-action="Details" asp-route-id="@item.WSId">Details</a> |
-                    <a asp-controller="Workspace" asp-action="ConfirmDelete" asp-route-id="@item.WSId">Delete</a>
+                <a asp-controller="MemberDetail" asp-action="ListMemberDetail" asp-route-id="@item.WSId">Details</a> |
+                <a asp-controller="Workspace" asp-action="ConfirmDelete" asp-route-id="@item.WSId">Delete</a>
             </td>
         </tr>
 }
