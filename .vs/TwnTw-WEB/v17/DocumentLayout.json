@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\learn\\linh tinh\\twntw-repo\\twntw-web\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\learn\\linh tinh\\twntw-repo\\twntw-web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\learn\\linh tinh\\twntw-repo\\twntw-web\\views\\user\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\user\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -26,24 +34,50 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\UserController.cs",
+              "RelativeToolTip": "TwnTw-WEB\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAADwvwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T01:39:24.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
+              "ToolTip": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
+              "RelativeToolTip": "TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACAAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-28T01:34:06.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "CreateUser.cshtml",
               "DocumentMoniker": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
               "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
               "ToolTip": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
               "RelativeToolTip": "TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAAsAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-07-26T16:15:12.873Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UpdateTaskDetail.cshtml",
               "DocumentMoniker": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\UpdateTaskDetail.cshtml",
               "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\TaskDetail\\UpdateTaskDetail.cshtml",
@@ -55,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ListTaskDetail.cshtml",
               "DocumentMoniker": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\ListTaskDetail.cshtml",
               "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\TaskDetail\\ListTaskDetail.cshtml",
@@ -67,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CreateTaskDetail.cshtml",
               "DocumentMoniker": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\CreateTaskDetail.cshtml",
               "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\TaskDetail\\CreateTaskDetail.cshtml",
