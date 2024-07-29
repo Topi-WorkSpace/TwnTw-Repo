@@ -8339,19 +8339,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Topi\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+      "projectUniqueName": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
       "projectName": "TwnTw-WEB",
-      "projectPath": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
-      "packagesPath": "C:\\Users\\Topi\\.nuget\\packages\\",
-      "outputPath": "D:\\Learn\\Linh tinh\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
+      "projectPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Topi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8433,7 +8433,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
