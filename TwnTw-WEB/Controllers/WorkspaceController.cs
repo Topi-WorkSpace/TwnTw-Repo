@@ -6,6 +6,7 @@ using System.Collections;
 using TwnTw_WEB.Data;
 using TwnTw_WEB.DTO_Models;
 using TwnTw_WEB.Models;
+using TwnTw_WEB.Models.ViewModel;
 
 namespace TwnTw_WEB.Controllers
 {
@@ -130,38 +131,121 @@ namespace TwnTw_WEB.Controllers
 
         public async Task<IActionResult> IntoWS(Guid id)
         {
-            var members = (from user in _context.Users
-                           join member in _context.MemberDetails
-                           on user.UserId equals member.UserId
-                           join workspace in _context.Workspaces
-                           on member.WorkSpaceId equals workspace.WSId
-                           where member.WorkSpaceId == id
-                           select new TwnTw_WEB.Models.ViewModel.MemberDetailViewModel
-                           {
-                               UserName = user.UserName,
-                               Email = user.Email,
-                               UserId = user.UserId,
-                               WSId = id,
-                               WSName = workspace.WSName,
-                               Role = member.Role,
-                               Status = member.Status,
-                           });
+                var members = await (from user in _context.Users
+                               join member in _context.MemberDetails
+                               on user.UserId equals member.UserId
+                               join workspace in _context.Workspaces
+                               on member.WorkSpaceId equals workspace.WSId
+                               where member.WorkSpaceId == id
+                               select new TwnTw_WEB.Models.ViewModel.MemberDetailViewModel
+                               {
+                                   UserName = user.UserName,
+                                   Email = user.Email,
+                                   UserId = user.UserId,
+                                   WSId = id,
+                                   WSName = workspace.WSName,
+                                   Role = member.Role,
+                                   Status = member.Status,
+                               }).ToListAsync();
+
+            var listTask = await (from task in _context.TaskDetails
+                            join user in _context.Users
+                            on task.UserId equals user.UserId
+                            join memberD in _context.MemberDetails
+                            on user.UserId equals memberD.UserId
+                            where memberD.WorkSpaceId == id
+                            select new TaskDetailListViewModel
+                            {
+                                TaskDetailId = task.TaskDetailId,
+                                UserId = user.UserId,
+                                UserName = user.UserName,
+                                Description = task.Description,
+                                Status = task.Status,
+                                CreatedDate = task.CreatedDate,
+                                EndDate = task.EndDate,
+                            }).ToListAsync();
+
+            ViewBag.ListTask = listTask;
+
+
+
             return View(members);
         }
 
-        public async Task<IActionResult> Assign(string userId)
+        public async Task<IActionResult> Assign(string userId, string WSId)
         {
-            var user = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(userId));
+            var assineeId = HttpContext.Session.GetString("UserId");
+
+            var user = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(assineeId) && m.WorkSpaceId == Guid.Parse(WSId));
 
             if (user.Role != "Leader")
             {
                 TempData["Notify"] = "Bạn không có quyên này";
-                return RedirectToAction("ListWorkspace","Workspace");
+                return RedirectToAction("IntoWS", new { id = user.WorkSpaceId });
             }
             else
             {
                 return View();
             }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Assign(TaskDetail task, string WSId, string userId)
+        {
+            task.TaskDetailId = Guid.NewGuid();
+            task.UserId = Guid.Parse(userId);
+            task.CreatedDate = DateTime.Now;
+            await _context.AddAsync(task);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("IntoWS", new { id = WSId });
+        }
+
+
+
+        public IActionResult AddMember(string WSId)
+        {
+            AddMemberDetailDto member = new AddMemberDetailDto()
+            {
+                WSId = WSId
+            };
+
+            var userId = HttpContext.Session.GetString("UserId");
+            
+            var findUser = _context.MemberDetails.FirstOrDefault(m => m.UserId == Guid.Parse(userId));
+
+            if (findUser.Role != "Leader")
+            {
+                TempData["Notify"] = "Bạn không có quyền này";
+                return RedirectToAction("IntoWS", new { id = WSId });
+            }
+
+            return View(member);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddMember(AddMemberDetailDto model)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == model.Email);
+
+            if (user == null)
+            {
+                TempData["Notify"] = "Không có người dùng này";
+                return RedirectToAction("AddMember", new { WSId = model.WSId });
+            }
+
+            MemberDetail memberDetail = new MemberDetail
+            {
+                MemberDetailId = Guid.NewGuid(),
+                WorkSpaceId = Guid.Parse(model.WSId),
+                Role = "Member",
+                Status = "Accepted",
+                UserId = user.UserId
+            };
+           await _context.MemberDetails.AddAsync(memberDetail);
+           await _context.SaveChangesAsync();
+
+            return RedirectToAction("IntoWS", new { id = model.WSId });
         }
     }
 }

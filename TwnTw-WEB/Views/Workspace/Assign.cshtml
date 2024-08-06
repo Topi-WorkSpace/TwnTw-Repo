@@ -1,0 +1,28 @@
+﻿@model TaskDetail
+
+<div class="card">
+    <div class="card-header">
+        <h1>Nhập Dữ Liệu Công Việc</h1>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label for="taskDescription" class="form-label">Mô Tả</label>
+                <textarea asp-for=Description class="form-control" id="taskDescription" rows="3" placeholder="Nhập mô tả công việc"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="taskStatus" class="form-label">Trạng Thái</label>
+                <select asp-for=Status class="form-select" id="taskStatus">
+                    <option value="Late">Trễ</option>
+                    <option value="Proccessing">Đang thực hiện</option>
+                    <option value="Done">Đã hoàn thành</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="taskAssignee" class="form-label">Ngày kết thúc</label>
+                <input asp-for=EndDate type="date" class="form-control" id="taskAssignee" placeholder="Nhập tên người nhận">
+            </div>
+            <button type="submit" class="btn btn-primary">Lưu</button>
+        </form>
+    </div>
+</div>
