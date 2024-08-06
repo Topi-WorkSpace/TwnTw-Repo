@@ -48,7 +48,7 @@ namespace TwnTw_WEB.Migrations
 
                     b.HasIndex("WorkSpaceId");
 
-                    b.ToTable("MemberDetails");
+                    b.ToTable("MemberDetails", (string)null);
                 });
 
             modelBuilder.Entity("TwnTw_WEB.Models.TaskDetail", b =>
@@ -75,7 +75,7 @@ namespace TwnTw_WEB.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("TaskDetails");
+                    b.ToTable("TaskDetails", (string)null);
                 });
 
             modelBuilder.Entity("TwnTw_WEB.Models.User", b =>
@@ -98,7 +98,7 @@ namespace TwnTw_WEB.Migrations
 
                     b.HasKey("UserId");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("TwnTw_WEB.Models.Workspace", b =>
@@ -121,7 +121,7 @@ namespace TwnTw_WEB.Migrations
 
                     b.HasKey("WSId");
 
-                    b.ToTable("Workspaces");
+                    b.ToTable("Workspaces", (string)null);
                 });
 
             modelBuilder.Entity("TwnTw_WEB.Models.MemberDetail", b =>

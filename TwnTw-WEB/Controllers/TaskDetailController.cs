@@ -55,7 +55,7 @@ namespace TwnTw_WEB.Controllers
 
             if(taskDetail == null)
             {
-                return NotFound("Id khoong hop le");
+                return NotFound("Id không hơp lệ");
             }
             if (await TryUpdateModelAsync(taskDetail, "",
                 s => s.Description,

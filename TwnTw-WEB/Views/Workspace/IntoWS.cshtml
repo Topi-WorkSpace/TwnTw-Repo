@@ -1,9 +1,19 @@
-﻿@model IEnumerable<TwnTw_WEB.Models.ViewModel.MemberDetailViewModel>
+﻿@using TwnTw_WEB.Models.ViewModel
+@model IEnumerable<TwnTw_WEB.Models.ViewModel.MemberDetailViewModel>
 
     <div class="">
         <div>
         <div><h2>Work Space: @Model.FirstOrDefault().WSName</h2> </div>
             <div class="badge bg-success"> Work Space Id : @Model.FirstOrDefault().WSId</div>
+        </div>
+        <div class="m-2">
+            <a class="btn btn-success" asp-action="AddMember" asp-controller="Workspace" asp-route-WSId="@Model.FirstOrDefault().WSId"> Thêm thành viên</a>
+        @if (TempData["Notify"] != null)
+        {
+            <div class="alert alert-danger container">
+                @TempData["Notify"]
+            </div>
+        }
         </div>
         <table class="table table-striped">
             <thead>
@@ -23,14 +33,49 @@
                     <td>@m.UserName</td>
                     <td>@m.Status</td>
                     <td>@m.Role</td>
-                    <td><a asp-action="Assign" asp-controller="Workspace" class="btn btn-success" asp-route-id="@m.UserId">Gán công việc</a></td>
-                    <td><a asp-action="Terminate" asp-controller="Workspace" class="btn btn-danger" asp-route-id="@m.UserId">Loại bỏ thành viên</a></td>
+                    <td><a asp-action="Assign" asp-controller="Workspace" class="btn btn-success" asp-route-userId="@m.UserId" asp-route-WSId="@Model.FirstOrDefault().WSId">Gán công việc</a></td>
+                    <td><a asp-action="Terminate" asp-controller="Workspace" class="btn btn-danger" asp-route-userId="@m.UserId" asp-route-WSId="@Model.FirstOrDefault().WSId">Loại bỏ thành viên</a></td>
                 </tr>
             }
             </tbody>
         </table>
     </div>
+    <hr />
     <div>
+        <h2>Danh sách công việc</h2>
+    </div>
+    <div class="row">
+        @{
+        var tasks = ViewBag.ListTask as List<TaskDetailListViewModel>;
+        }
+    @if (tasks != null)
+    {
+        @foreach (var task in tasks)
+        {
+            <div class="col-3">
+                <div class="card rounded-2">
+                    <div class="card-header bg-primary text-white">
+                        <span class="fw-bold">@task.UserName</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="">
+                            <p>Mô tả công việc:</p>
+                            <p>@task.Description</p>
+                        </div>
+                        <div>
+                            <p>Trạng thái: @task.Status</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p>Ngày tạo: @task.CreatedDate</p>
+                        <p>Ngày kết thúc: @task.EndDate</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    </div>
+    <div class="text-center mt-2">
         @{
             var userId = Context.Session.GetString("UserId");
         }

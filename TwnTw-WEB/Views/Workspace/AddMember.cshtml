@@ -1,0 +1,19 @@
+﻿@model TwnTw_WEB.DTO_Models.AddMemberDetailDto
+
+<div>
+    <h2> Thêm thành viên vào dự án </h2>
+    <form method="post">
+        <div class="form-floating mb-3 mt-3">
+            <input asp-for=Email type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+            <label for="email">Email </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Thêm vào dự án</button>
+    </form>
+
+    @if (TempData["Notify"] != null)
+    {
+        <div class="alert alert-danger container">
+            TempData["Notify"] = "Không có người dùng này";
+        </div>
+    }
+</div>
