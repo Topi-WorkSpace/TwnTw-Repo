@@ -1,51 +1,40 @@
-﻿<div class="workspace-header">
+﻿@{
+    
+}
+@model List<TwnTw_WEB.DTO_Models.TaskDetailViewModel_ForDoneList>
+<div class="workspace-header">
     <h1>Công việc đã hoàn thành</h1>
 </div>
 
 <!-- Bảng Công việc đã hoàn thành -->
 <div id="completed-task-table">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Tên công việc</th>
-                <th>Ngày hoàn thành</th>
-                <th>Người thực hiện</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Đăng bài, tương tác khách hàng,chạy quảng cáo Fanpage</td>
-                <td>@DateTime.Now</td>
-                <td>Nguyễn Thành Thái</td>
-            </tr>
-            <tr>
-                <td>Lên giao diện web</td>
-                <td>@DateTime.Now</td>
-                <td>Phan Thế Kỷ</td>
-            </tr>
-            <tr>
-                <td>Viết báo cáo</td>
-                <td>@DateTime.Now</td>
-                <td>Nguyễn Võ Anh Tuấn</td>
-            </tr>
-            <tr>
-                <td>Khảo sát ý kiến người dùng</td>
-                <td>@DateTime.Now</td>
-                <td>Nguyễn Ngọc Chiến</td>
-            </tr>
-            <tr>
-                <td>Tạo cơ sở dữ liệu người dùng</td>
-                <td>@DateTime.Now</td>
-                <td>Trịnh Văn Trường</td>
-            </tr>
-            <tr>
-                <td>Dựng video quá trình làm việc nhóm</td>
-                <td>@DateTime.Now</td>
-                <td>Nguyễn Thanh Tú</td>
-            </tr>
-            <!-- Thêm nhiều hàng khác nếu cần -->
-        </tbody>
-    </table>
+
+    @foreach(var workSpaceInfo in Model)
+    {
+        <h3>WorkSpace Name: @workSpaceInfo.workSpace.WSName</h3>
+        <h5>WorkSpace Id: @workSpaceInfo.workSpace.WSId</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Tên công việc</th>
+                    <th>Ngày hoàn thành</th>
+                    <th>Người thực hiện</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var taskDetail in workSpaceInfo.taskDetails)
+                {
+                    <tr>
+                        <td>@taskDetail.TaskDetailId</td>
+                        <td>@taskDetail.CreatedDate</td>
+                        <td>@workSpaceInfo.memberDetail.Users.UserName</td>
+                    </tr>
+                }
+                <!-- Thêm nhiều hàng khác nếu cần -->
+            </tbody>
+        </table>
+    }
+
 </div>
 <div>
     <a asp-action="ListWorkspace" asp-controller="workspace">Trở về không gian làm việc</a>
