@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TwnTw_WEB.Data;
 using TwnTw_WEB.Models;
@@ -51,7 +52,7 @@ namespace TwnTw_WEB.Controllers
                 await _context.MemberDetails.AddAsync(memberDetail);
                 await _context.SaveChangesAsync();
                 Console.WriteLine("Mời thành công");
-                return RedirectToAction("ListMemberDetail", new { id = memberDetail.WorkSpaceId });
+                return RedirectToAction("ListWorkspace", "Workspace");
             }
 
             Console.WriteLine("Mời không thành công");

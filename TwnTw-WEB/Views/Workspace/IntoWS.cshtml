@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TwnTw_WEB.Models.ViewModel.MemberDetailViewModel>
+
+    <div class="">
+        <div>
+        <div><h2>Work Space: @Model.FirstOrDefault().WSName</h2> </div>
+            <div class="badge bg-success"> Work Space Id : @Model.FirstOrDefault().WSId</div>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Email liên hệ</td>
+                    <td>Tên thành viên </td>
+                    <td>Trạng thái</td>
+                    <td>Vai trò</td>
+                    <td colspan="2">Thao tác</td>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var m in Model)
+            {
+                <tr>
+                    <td>@m.Email</td>
+                    <td>@m.UserName</td>
+                    <td>@m.Status</td>
+                    <td>@m.Role</td>
+                    <td><a asp-action="Assign" asp-controller="Workspace" class="btn btn-success" asp-route-id="@m.UserId">Gán công việc</a></td>
+                    <td><a asp-action="Terminate" asp-controller="Workspace" class="btn btn-danger" asp-route-id="@m.UserId">Loại bỏ thành viên</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+    <div>
+        @{
+            var userId = Context.Session.GetString("UserId");
+        }
+    <a class="btn btn-outline-secondary" asp-action="ListWorkspace" asp-controller="WorkSpace" asp-route-id="userId">Trở về danh sách không gian làm việc</a>
+    </div>

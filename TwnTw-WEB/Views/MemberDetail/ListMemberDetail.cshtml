@@ -4,10 +4,10 @@
     ViewData["Title"] = "ListMemberDetail";
 }
 
-<h1>ListMemberDetail</h1>
+<h1>Theo dõi thành viên</h1>
 
 <p>
-    <a asp-action="CreateMemberDetail">Create New</a>
+    <a asp-action="CreateMemberDetail">Tạo thành viên</a>
 </p>
 <table class="table">
     <thead>
@@ -45,9 +45,12 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MemberDetailId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.MemberDetailId">Details</a> |
-                    <a asp-action="DeleteMemberDetail" asp-route-id="@item.MemberDetailId">Delete</a>
+                <a asp-action="DeleteMemberDetail" asp-route-id="@item.MemberDetailId">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+<div>
+    <a asp-action="ListWorkspace" asp-controller="workspace">Back to List</a>
+</div>

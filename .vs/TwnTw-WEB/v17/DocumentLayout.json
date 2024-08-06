@@ -3,32 +3,52 @@
   "WorkspaceRootPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\user\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\controllers\\workspacecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\user\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\user\\createuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\models\\viewmodel\\memberdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\models\\viewmodel\\memberdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\taskdetail\\listtaskdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\taskdetail\\listtaskdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\workspace\\intows.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\workspace\\intows.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\taskdetail\\updatetaskdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\taskdetail\\updatetaskdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\workspace\\join.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\workspace\\join.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\taskdetail\\createtaskdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\taskdetail\\createtaskdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\workspace\\listworkspace.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\workspace\\listworkspace.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\workspace\\createworkspace.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\workspace\\createworkspace.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\modelprofile\\workspaceprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\modelprofile\\workspaceprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\modelprofile\\taskdetailprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\modelprofile\\taskdetailprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\modelprofile\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\modelprofile\\userprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|d:\\duancuanguoithayyeudau\\twntw-repo\\twntw-web\\models\\workspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F8D7150-5C15-45D7-B1CA-8A1A0E793827}|TwnTw-WEB\\TwnTw-WEB.csproj|solutionrelative:twntw-web\\models\\workspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,88 +82,154 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\appsettings.json",
-              "RelativeDocumentMoniker": "TwnTw-WEB\\appsettings.json",
-              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\appsettings.json",
-              "RelativeToolTip": "TwnTw-WEB\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-29T14:10:51.604Z",
+              "DocumentIndex": 2,
+              "Title": "MemberDetailViewModel.cs",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Models\\ViewModel\\MemberDetailViewModel.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Models\\ViewModel\\MemberDetailViewModel.cs",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Models\\ViewModel\\MemberDetailViewModel.cs",
+              "RelativeToolTip": "TwnTw-WEB\\Models\\ViewModel\\MemberDetailViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T10:28:57.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "UserController.cs",
               "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "TwnTw-WEB\\Controllers\\UserController.cs",
               "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\UserController.cs",
               "RelativeToolTip": "TwnTw-WEB\\Controllers\\UserController.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAADwvwAAAAAAAAAA",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAYwKoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T01:39:24.294Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
-              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
-              "RelativeToolTip": "TwnTw-WEB\\Views\\User\\ChangePassword.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-28T01:34:06.21Z"
+              "WhenOpened": "2024-08-06T09:53:33.184Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateUser.cshtml",
-              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
-              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
-              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
-              "RelativeToolTip": "TwnTw-WEB\\Views\\User\\CreateUser.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Title": "IntoWS.cshtml",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\IntoWS.cshtml",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\Workspace\\IntoWS.cshtml",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\IntoWS.cshtml",
+              "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\IntoWS.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-26T16:15:12.873Z"
+              "WhenOpened": "2024-08-06T09:51:00.184Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "UpdateTaskDetail.cshtml",
-              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\UpdateTaskDetail.cshtml",
-              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\TaskDetail\\UpdateTaskDetail.cshtml",
-              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\UpdateTaskDetail.cshtml",
-              "RelativeToolTip": "TwnTw-WEB\\Views\\TaskDetail\\UpdateTaskDetail.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "ListWorkspace.cshtml",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\ListWorkspace.cshtml",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\Workspace\\ListWorkspace.cshtml",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\ListWorkspace.cshtml",
+              "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\ListWorkspace.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAANEAAACDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-26T16:14:42.449Z"
+              "WhenOpened": "2024-08-06T09:30:15.46Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ListTaskDetail.cshtml",
-              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\ListTaskDetail.cshtml",
-              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\TaskDetail\\ListTaskDetail.cshtml",
-              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\ListTaskDetail.cshtml",
-              "RelativeToolTip": "TwnTw-WEB\\Views\\TaskDetail\\ListTaskDetail.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAACMAAAAQAAAA",
+              "Title": "Join.cshtml",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\Join.cshtml",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\Workspace\\Join.cshtml",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\Join.cshtml",
+              "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\Join.cshtml",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAIwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-26T16:14:07.753Z"
+              "WhenOpened": "2024-08-06T08:51:35.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorkspaceController.cs",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\WorkspaceController.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Controllers\\WorkspaceController.cs",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\WorkspaceController.cs",
+              "RelativeToolTip": "TwnTw-WEB\\Controllers\\WorkspaceController.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAmwJ8AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T08:27:15.721Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "CreateTaskDetail.cshtml",
-              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\CreateTaskDetail.cshtml",
-              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\TaskDetail\\CreateTaskDetail.cshtml",
-              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\TaskDetail\\CreateTaskDetail.cshtml",
-              "RelativeToolTip": "TwnTw-WEB\\Views\\TaskDetail\\CreateTaskDetail.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "CreateWorkspace.cshtml",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\CreateWorkspace.cshtml",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\Workspace\\CreateWorkspace.cshtml",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Workspace\\CreateWorkspace.cshtml",
+              "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\CreateWorkspace.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-26T16:14:00.978Z"
+              "WhenOpened": "2024-08-06T09:41:40.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TwnTw-WEB\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACgAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T10:43:32.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TaskDetailProfile.cs",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\TaskDetailProfile.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\ModelProfile\\TaskDetailProfile.cs",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\TaskDetailProfile.cs",
+              "RelativeToolTip": "TwnTw-WEB\\ModelProfile\\TaskDetailProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T08:25:51.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UserProfile.cs",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\UserProfile.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\ModelProfile\\UserProfile.cs",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\UserProfile.cs",
+              "RelativeToolTip": "TwnTw-WEB\\ModelProfile\\UserProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T08:25:49.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WorkspaceProfile.cs",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\WorkspaceProfile.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\ModelProfile\\WorkspaceProfile.cs",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\ModelProfile\\WorkspaceProfile.cs",
+              "RelativeToolTip": "TwnTw-WEB\\ModelProfile\\WorkspaceProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T08:25:36.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Workspace.cs",
+              "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Models\\Workspace.cs",
+              "RelativeDocumentMoniker": "TwnTw-WEB\\Models\\Workspace.cs",
+              "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Models\\Workspace.cs",
+              "RelativeToolTip": "TwnTw-WEB\\Models\\Workspace.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T08:24:30.433Z"
             }
           ]
         }

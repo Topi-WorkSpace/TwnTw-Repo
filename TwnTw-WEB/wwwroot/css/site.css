@@ -20,3 +20,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.background-image {
+    background-image: url('https://images.vexels.com/content/147559/preview/office-teamwork-illustration-c0bdf7.png'); /* Đường dẫn đến hình ảnh bạn muốn sử dụng */
+    background-size: cover; /* Đảm bảo hình ảnh phủ kín phần nền */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+}

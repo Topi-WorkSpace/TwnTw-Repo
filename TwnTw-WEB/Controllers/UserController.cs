@@ -7,6 +7,7 @@ using TwnTw_WEB.DTO_Models;
 using TwnTw_WEB.Models;
 using BCrypt.Net;
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TwnTw_WEB.Controllers
 {
@@ -86,8 +87,9 @@ namespace TwnTw_WEB.Controllers
                 {
                     Console.WriteLine("Đăng Nhập thành công");
                     HttpContext.Session.SetString("UserName", user.UserName);
+                    HttpContext.Session.SetString("UserId", user.UserId.ToString());
                     // Đăng nhập thành công
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("ListWorkspace", "Workspace");
                 }
                 else
                 {
@@ -159,6 +161,14 @@ namespace TwnTw_WEB.Controllers
 
             }
         }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index","Home");
+        }
+
+        
 
     }
 }

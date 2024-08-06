@@ -26,6 +26,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\DuAnCuaNguoiThayYeuDau\TwnTw-Repo\TwnTw-WEB
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Calendar/Chart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcQ2hhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Calendar/DoneList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcRG9uZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Calendar/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Calendar/Process.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcUHJvY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Calendar/WorkList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJcV29ya0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +104,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Workspace/DeleteWorkspace.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NwYWNlXERlbGV0ZVdvcmtzcGFjZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Workspace/IntoWS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NwYWNlXEludG9XUy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Workspace/Join.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NwYWNlXEpvaW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Workspace/ListWorkspace.cshtml]

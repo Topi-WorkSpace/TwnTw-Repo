@@ -4,20 +4,86 @@
 @{
 }
 @model TwnTw_WEB.DTO_Models.UserLogin
-<h2>Đăng nhập</h2>
-<form asp-controller="User" asp-action="Login" method="post">
-    <div class="form-group">
-        <label asp-for="Email" class="control-label"></label>
-        <input asp-for="Email" class="form-control" />
-        <span asp-validation-for="Email" class="text-danger"></span>
+
+@* <style>
+    .background-image {
+        background-image: url('https://images.vexels.com/content/147559/preview/office-teamwork-illustration-c0bdf7.png'); /* Đường dẫn đến hình ảnh bạn muốn sử dụng */
+        background-size: cover; /* Đảm bảo hình ảnh phủ kín phần nền */
+        background-position: center; /* Căn giữa hình ảnh */
+        background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    }
+
+    .thea {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+</style>
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+<div class="">
+    <div class="card container rounded background-image d-flex justify-content-center align-items-center" style="height: 80vh">
+        <div class="bg-light box-shadow rounded-3 w-50 container p-4">
+            <div class="text-center">
+                <h2>Đăng nhập</h2>
+            </div>
+            <form asp-controller="User" asp-action="Login" method="post">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mt-2 mb-2 container">
+                    <button class="btn btn-primary form-control" type="submit">
+                        Đăng nhập
+                    </button>
+                </div>
+                <div class="mt-2 mb-2 text-center container">
+                    <a class="btn btn-warning form-control" asp-action="register" asp-controller="user"> Đăng ký</a>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label asp-for="Password" class="control-label"></label>
-        <input asp-for="Password" class="form-control" type="password" />
-        <span asp-validation-for="Password" class="text-danger"></span>
-    </div>
-    <button type="submit">
-        Đăng  
-        nhập
-    </button>
-</form>
+</div>
+
+
+@* <div class="container-fluid">
+    <form class="mx-auto phom">
+
+        <div class="row align-items-center">
+            <div class="header-text mb-4">
+                <h2 class="text-center">Login</h2>
+            </div>
+
+            <div class="input-group mb-3">
+                <input type="email" class="form-control form-control-lg fs-6" placeholder="Email address">
+            </div>
+
+
+            <div class="input-group mb-1">
+                <input type="password" class="form-control form-control-lg  fs-6" placeholder="Password">
+            </div>
+
+            <div class="input-group mb-5 d-flex justify-content-between">
+                <small>
+                    Forgot password? <a style="color: orangered; text-decoration: none; font-weight: bold;">Get new password</a>
+                </small>
+            </div>
+            <div class="input-group mb-3">
+                <button class="btn btn-lg btn-primary w-100 fs-6"
+                        style="background-color: orangered; border: orangered;">
+                    Login
+                </button>
+            </div>
+            <div class="row">
+                <small>
+                    Don't have an account? <a style="color: orangered; text-decoration: none; font-weight: bold;">Sign Up</a>
+                </small>
+            </div>
+        </div>
+    </form>
+</div> *@

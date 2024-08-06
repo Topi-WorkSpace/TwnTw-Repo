@@ -6,12 +6,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<TwnTwDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("twntw")));
+builder.Services.AddDbContext<TwnTwDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("cloudConnection")));
 builder.Services.AddAutoMapper(typeof(MemberDetailProfile));
 builder.Services.AddAutoMapper(typeof(TaskDetailProfile));
 builder.Services.AddAutoMapper(typeof(WorkspaceProfile));
 builder.Services.AddAutoMapper(typeof(UserProfile));
-builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); });
+builder.Services.AddAuthentication().AddCookie(options =>
+{
+    options.LoginPath = "/User/Login";
+});
+builder.Services.AddSession(options => 
+{ 
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,6 +37,8 @@ app.UseStaticFiles();
 app.UseRouting();
 //session
 app.UseSession();
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

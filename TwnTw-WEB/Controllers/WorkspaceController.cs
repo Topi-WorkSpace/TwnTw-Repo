@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections;
 using TwnTw_WEB.Data;
 using TwnTw_WEB.DTO_Models;
 using TwnTw_WEB.Models;
@@ -43,15 +45,26 @@ namespace TwnTw_WEB.Controllers
                 UserId = Guid.Parse(HttpContext.Session.GetString("UserId"))
             };
             await _context.MemberDetails.AddAsync(memberDetail);
+            await _context.SaveChangesAsync();
             return RedirectToAction("ListWorkspace");
         }
 
         //Trả view xem thông tin workspace
         [HttpGet]
-        public async Task<IActionResult> ListWorkspace()
+        public async Task<IActionResult> ListWorkspace(string userId)
         {
-            IEnumerable<Workspace> workspaces = await _context.Workspaces.ToListAsync();
-            return View(workspaces);
+            userId = HttpContext.Session.GetString("UserId");
+            if (userId != string.Empty)
+            {
+                IEnumerable<Workspace> workspaces = await (from md in _context.MemberDetails
+                                                           join ws in _context.Workspaces
+                                                           on md.WorkSpaceId equals ws.WSId
+                                                           where md.UserId == Guid.Parse(userId)
+                                                           select ws)
+                                                           .ToListAsync();
+                return View(workspaces);
+            }
+            return View(new List<Workspace>());
         }
 
 
@@ -81,6 +94,74 @@ namespace TwnTw_WEB.Controllers
             _context.Workspaces.Remove(workspace);
             await _context.SaveChangesAsync();
             return RedirectToAction("ListWorkspace");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Join()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Join(string wSId)
+        {
+            if (string.IsNullOrEmpty(wSId) || string.IsNullOrWhiteSpace(wSId))
+            {
+                TempData["Error"] = "Hãy nhập mã của work space";
+                return View();
+            }
+            var userId = HttpContext.Session.GetString("UserId");
+
+            MemberDetail memberDetail = new MemberDetail
+            {
+                MemberDetailId = Guid.NewGuid(),
+                WorkSpaceId = Guid.Parse(wSId),
+                Role = "Member",
+                Status = "Accepted",
+                UserId = Guid.Parse(HttpContext.Session.GetString("UserId"))
+            };
+
+            /*var eMember = await _context.MemberDetails.FirstOrDefaultAsync(memberDetail.);*/
+
+            var join = await _context.MemberDetails.AddAsync(memberDetail);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("ListWorkspace","Workspace");
+        }
+
+        public async Task<IActionResult> IntoWS(Guid id)
+        {
+            var members = (from user in _context.Users
+                           join member in _context.MemberDetails
+                           on user.UserId equals member.UserId
+                           join workspace in _context.Workspaces
+                           on member.WorkSpaceId equals workspace.WSId
+                           where member.WorkSpaceId == id
+                           select new TwnTw_WEB.Models.ViewModel.MemberDetailViewModel
+                           {
+                               UserName = user.UserName,
+                               Email = user.Email,
+                               UserId = user.UserId,
+                               WSId = id,
+                               WSName = workspace.WSName,
+                               Role = member.Role,
+                               Status = member.Status,
+                           });
+            return View(members);
+        }
+
+        public async Task<IActionResult> Assign(string userId)
+        {
+            var user = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(userId));
+
+            if (user.Role != "Leader")
+            {
+                TempData["Notify"] = "Bạn không có quyên này";
+                return RedirectToAction("ListWorkspace","Workspace");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

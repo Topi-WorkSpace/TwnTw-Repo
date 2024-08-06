@@ -3,45 +3,277 @@
 @{
     ViewData["Title"] = "ListWorkspace";
 }
+<style>
+    /* General Styles */
+    .container {
+        padding: 2rem;
+    }
 
-<h1>ListWorkspace</h1>
+    /* Card Styles */
+    .card {
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+    }
 
-<p>
-    <a asp-action="CreateWorkspace">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.WSName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.WSName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                <a asp-controller="Workspace" asp-action="UpdateWorkspace" asp-route-id="@item.WSId">Edit</a> |
-                <a asp-controller="MemberDetail" asp-action="ListMemberDetail" asp-route-id="@item.WSId">Details</a> |
-                <a asp-controller="Workspace" asp-action="ConfirmDelete" asp-route-id="@item.WSId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    /* List Group Styles */
+    .list-group-item {
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+        .list-group-item a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+            .list-group-item a:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+
+    /* Button Colors */
+    .btn-warning {
+        background-color: #f0ad4e;
+    }
+
+    .btn-danger {
+        background-color: #d9534f;
+    }
+
+    .btn-primary {
+        background-color: #0275d8;
+    }
+
+    .btn-secondary {
+        background-color: #5bc0de;
+    }
+
+    .btn-success {
+        background-color: #5cb85c;
+    }
+
+    .btn-dark {
+        background-color: #292b2c;
+    }
+
+    /* Button Hover Effects */
+    .btn-warning:hover {
+        background-color: #ec971f;
+    }
+
+    .btn-danger:hover {
+        background-color: #c9302c;
+    }
+
+    .btn-primary:hover {
+        background-color: #025aa5;
+    }
+
+    .btn-secondary:hover {
+        background-color: #31b0d5;
+    }
+
+    .btn-success:hover {
+        background-color: #4cae4c;
+    }
+
+    .btn-dark:hover {
+        background-color: #1c1c1c;
+    }
+
+    /* Table Styles */
+    .table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+        .table th, .table td {
+            text-align: center;
+            padding: 12px;
+        }
+
+        .table thead th {
+            background-color: #0275d8;
+            color: #fff;
+            border-bottom: 2px solid #025aa5;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .table tbody tr:hover {
+            background-color: #e9ecef;
+            cursor: pointer;
+        }
+
+    /* Create Button */
+    .create-btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #0275d8;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+
+        .create-btn:hover {
+            background-color: #025aa5;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+    /* Workspace Header */
+    .workspace-header {
+        margin-bottom: 20px;
+    }
+
+        .workspace-header h1 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .workspace-header p {
+            margin: 0;
+        }
+</style>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="stylesheet" href="home.css">
+
+<div class="">
+    <div class="row">
+        <article class="col-4">
+            <div class="card">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <h2>Danh mục các công việc</h2>
+                    </li>
+                    <li class="list-group-item"><a class="btn btn-warning" asp-action="Index" asp-controller="Calendar">Lịch làm việc</a></li>
+                    <li class="list-group-item"><a class="btn btn-warning" asp-action="Join" asp-controller="Workspace">Tham gia vào dự án</a></li>
+                    <li class="list-group-item"><a class="btn btn-primary" asp-action="ListMemberDetail" asp-controller="MemberDetail">Theo dõi thành viên</a></li>
+                    <li class="list-group-item"><a class="btn btn-danger" asp-action="DoneList" asp-controller="Calendar">Công việc đã hoàn thành</a></li>
+                    <li class="list-group-item"><a class="btn btn-secondary" asp-action="Process" asp-controller="Calendar">Tiến độ công việc</a></li>
+                    <li class="list-group-item"><a class="btn btn-success" asp-action="Chart" asp-controller="Calendar">Biểu đồ quá trình</a></li>
+                    <li class="list-group-item"><a class="btn btn-dark" asp-action="WorkList" asp-controller="Calendar">Danh sách công việc</a></li>
+                </ul>
+            </div>
+
+        </article>
+        <aside class="col-8">
+            <div class="workspace-header">
+                <h1>Không gian làm việc</h1>
+                <p>
+                    <a class="create-btn" asp-action="CreateWorkspace">Tạo mới</a>
+                </p>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.WSName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status)
+                        </th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.WSName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status)
+                            </td>
+                            <td>
+                                <a asp-controller="Workspace" asp-action="IntoWS" class="btn-primary btn" asp-route-id="@item.WSId">Vào workspace</a>
+                                <a asp-controller="Workspace" asp-action="ConfirmDelete" class="btn-danger btn" asp-route-id="@item.WSId">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </aside>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+@* <div class="row" style="height: 80vh">
+    <article class="col-4">
+
+        <ul class="list-group">
+            <li class="list-group-item"><h2>Danh mục các công việc</h2></li>
+            <li class="list-group-item"><a class="btn btn-warning" asp-action="Index" asp-controller="Calendar">Lịch làm việc</a></li>
+            <li class="list-group-item"><a class="btn btn-danger" asp-action="">Thành viên dự án</a></li>
+            <li class="list-group-item"><a class="btn btn-primary" asp-action="">Theo dõi thành viên</a></li>
+            <li class="list-group-item"><a class="btn btn-secondary" asp-action="">Tiến độ công việc</a></li>
+            <li class="list-group-item"><a class="btn btn-success" asp-action="">Biểu đồ quá trình</a></li>
+            <li class="list-group-item"><a class="btn btn-dark" asp-action="">Danh sách công việc</a></li>
+        </ul>
+    </article>
+    <aside class="col-8">
+        <h1>Không gian làm việc</h1>
+
+        <p>
+            <a asp-action="CreateWorkspace">Tạo mới</a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.WSName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.WSName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            <a asp-controller="Workspace" asp-action="UpdateWorkspace" asp-route-id="@item.WSId">Edit</a> |
+                            <a asp-controller="MemberDetail" asp-action="ListMemberDetail" asp-route-id="@item.WSId">Details</a> |
+                            <a asp-controller="Workspace" asp-action="ConfirmDelete" asp-route-id="@item.WSId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </aside>
+</div> *@
