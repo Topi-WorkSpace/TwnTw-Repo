@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
         "outputPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
+=======
+    "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+        "projectName": "TwnTw-WEB",
+        "projectPath": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+        "packagesPath": "C:\\Users\\Phan Ky\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
+>>>>>>> master
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

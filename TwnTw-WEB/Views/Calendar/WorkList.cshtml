@@ -1,4 +1,5 @@
-﻿<style>
+﻿@model List<TwnTw_WEB.DTO_Models.TaskDetailViewModel_ForList>
+<style>
 
     .list-group-item a {
         text-decoration: none;
@@ -16,41 +17,47 @@
 <div class="container">
     <div id="task-list-table">
         <h2>Danh sách công việc</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Tên công việc</th>
-                    <th>Người nhận</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Đăng bài, tương tác khách hàng,chạy quảng cáo Fanpage</td>
-                    <td>Nguyễn Thành Thái</td>
-                </tr>
-                <tr>
-                    <td>Lên giao diện web</td>
-                    <td>Phan Thế Kỷ</td>
-                </tr>
-                <tr>
-                    <td>Viết báo cáo</td>
-                    <td>Nguyễn Võ Anh Tuấn</td>
-                </tr>
-                <tr>
-                    <td>Khảo sát ý kiến người dùng</td>
-                    <td>Nguyễn Ngọc Chiến</td>
-                </tr>
-                <tr>
-                    <td>Tạo cơ sở dữ liệu người dùng</td>
-                    <td>Trịnh Văn Trường</td>
-                </tr>
-                <tr>
-                    <td>Dựng video quá trình làm việc nhóm</td>
-                    <td>Nguyễn Thanh Tú</td>
-                </tr>
-                <!-- Thêm nhiều hàng khác nếu cần -->
-            </tbody>
-        </table>
+
+        @foreach(var workSpace in Model)
+        {
+            <h3>Tên workspace: @workSpace.workSpace.WSName</h3>
+            <h5 class="badge bg-info">@workSpace.workSpace.WSId</h5>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tên công việc</th>
+                        <th>Ngày tạo</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Người nhận</th>
+                        <th>Trạng thái</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(workSpace.taskDetails.Count == 0)
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">Không có công việc nào</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach(var taskDetail in workSpace.taskDetails)
+                        {
+                            <tr>
+                                <td>@taskDetail.Description</td>
+                                <td>@taskDetail.CreatedDate</td>
+                                <td>@taskDetail.EndDate</td>
+                                <td>@workSpace.memberDetail.Users.UserName</td>
+                                <td><div class="badge bg-warning text-black">@taskDetail.Status</div></td>
+                            </tr>
+                        }
+                    }
+
+                    <!-- Thêm nhiều hàng khác nếu cần -->
+                </tbody>
+            </table>
+        }
+        
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

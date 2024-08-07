@@ -1,7 +1,7 @@
 ﻿@{
     
 }
-@model List<TwnTw_WEB.DTO_Models.TaskDetailViewModel_ForDoneList>
+@model List<TwnTw_WEB.DTO_Models.TaskDetailViewModel_ForList>
 <div class="workspace-header">
     <h1>Công việc đã hoàn thành</h1>
 </div>
@@ -12,24 +12,37 @@
     @foreach(var workSpaceInfo in Model)
     {
         <h3>WorkSpace Name: @workSpaceInfo.workSpace.WSName</h3>
-        <h5>WorkSpace Id: @workSpaceInfo.workSpace.WSId</h5>
+        <h5 class="badge bg-success" >WorkSpace Id: @workSpaceInfo.workSpace.WSId</h5>
         <table class="table table-striped">
             <thead>
                 <tr>
                     <th>Tên công việc</th>
+                    <th>Mô tả công việc</th>
                     <th>Ngày hoàn thành</th>
                     <th>Người thực hiện</th>
+                    
                 </tr>
             </thead>
             <tbody>
-                @foreach (var taskDetail in workSpaceInfo.taskDetails)
+                @if (workSpaceInfo.taskDetails.Count == 0)
                 {
                     <tr>
-                        <td>@taskDetail.TaskDetailId</td>
-                        <td>@taskDetail.CreatedDate</td>
-                        <td>@workSpaceInfo.memberDetail.Users.UserName</td>
+                        <td colspan="4" class="text-center">Không có công việc nào</td>
                     </tr>
                 }
+                else
+                {
+                    foreach (var taskDetail in workSpaceInfo.taskDetails)
+                    {
+                        <tr>
+                            <td>@taskDetail.TaskDetailId</td>
+                            <td>@taskDetail.Description</td>
+                            <td>@taskDetail.CreatedDate</td>
+                            <td>@workSpaceInfo.memberDetail.Users.UserName</td>
+                        </tr>
+                    }
+                }
+                
                 <!-- Thêm nhiều hàng khác nếu cần -->
             </tbody>
         </table>

@@ -2,7 +2,7 @@
 
 namespace TwnTw_WEB.DTO_Models
 {
-    public class TaskDetailViewModel_ForDoneList //Sử dụng cho một workspace
+    public class TaskDetailViewModel_ForList //Sử dụng cho một workspace
     {
 
         //thông tin về workspace
