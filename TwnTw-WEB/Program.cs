@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TwnTw_WEB.Data;
 using TwnTw_WEB.ModelProfile;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
