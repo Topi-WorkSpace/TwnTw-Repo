@@ -133,7 +133,7 @@
         <h6>Mã workspace: </h6>
         <p>
             <input placeholder="nhập mã Workspace..." oninput="this.className = ''" name="wSId">
-            @if (TempData["Error"] != string.Empty || TempData["Error"] != null)
+            @if (TempData["Error"] != null)
             {
                 <div class="container alert alert-danger" role="alert">
                     @TempData["Error"]

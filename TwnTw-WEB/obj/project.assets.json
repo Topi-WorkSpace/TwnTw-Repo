@@ -8339,19 +8339,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Phan Ky\\.nuget\\packages\\": {}
+    "C:\\Users\\ASUS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phan Ky\\Source\\Repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+      "projectUniqueName": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
       "projectName": "TwnTw-WEB",
-      "projectPath": "C:\\Users\\Phan Ky\\Source\\Repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
-      "packagesPath": "C:\\Users\\Phan Ky\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Phan Ky\\Source\\Repos\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
+      "projectPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+      "outputPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Phan Ky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8359,6 +8359,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8432,7 +8433,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
