@@ -197,7 +197,7 @@ namespace TwnTw_WEB.Controllers
 
             if (user.Role != "Leader")
             {
-                TempData["error"] = "Bạn không có quyên này";
+                TempData["error"] = "Bạn không có quyền này";
                 return RedirectToAction("IntoWS", new { id = user.WorkSpaceId });
             }
             else

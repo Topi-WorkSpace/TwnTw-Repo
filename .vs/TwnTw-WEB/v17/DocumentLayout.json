@@ -74,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -97,10 +97,6 @@
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Assign.cshtml",
@@ -110,8 +106,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\Assign.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T16:44:44.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T16:44:44.655Z"
             },
             {
               "$type": "Document",
@@ -123,8 +118,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\UpdateTask.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T16:34:38.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T16:34:38.979Z"
             },
             {
               "$type": "Document",
@@ -136,8 +130,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Controllers\\HomeController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T15:59:47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T15:59:47Z"
             },
             {
               "$type": "Document",
@@ -147,7 +140,7 @@
               "RelativeDocumentMoniker": "TwnTw-WEB\\Controllers\\WorkspaceController.cs",
               "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\Controllers\\WorkspaceController.cs",
               "RelativeToolTip": "TwnTw-WEB\\Controllers\\WorkspaceController.cs",
-              "ViewState": "AQIAALQAAAAAAAAAAAAtwMoAAAAQAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-07T08:51:58.115Z",
               "EditorCaption": ""
@@ -162,8 +155,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\ListWorkspace.cshtml",
               "ViewState": "AQIAALgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:48:21.335Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:48:21.335Z"
             },
             {
               "$type": "Document",
@@ -175,8 +167,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\Join.cshtml",
               "ViewState": "AQIAACEAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:48:09.816Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:48:09.816Z"
             },
             {
               "$type": "Document",
@@ -188,8 +179,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Models\\TaskDetail.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:54:40.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:54:40.098Z"
             },
             {
               "$type": "Document",
@@ -201,21 +191,19 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\IntoWS.cshtml",
               "ViewState": "AQIAADMAAAAAAAAAAAAAAFAAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T16:03:17.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T16:03:17.217Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "TwnTw-WEB",
+              "Title": "TwnTw-WEB.csproj",
               "DocumentMoniker": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
               "RelativeDocumentMoniker": "TwnTw-WEB\\TwnTw-WEB.csproj",
               "ToolTip": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
               "RelativeToolTip": "TwnTw-WEB\\TwnTw-WEB.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-07T16:08:42.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T16:08:42.318Z"
             },
             {
               "$type": "Document",
@@ -227,8 +215,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\AddMember.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:48:04.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:48:04.791Z"
             },
             {
               "$type": "Document",
@@ -240,8 +227,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Controllers\\UserController.cs",
               "ViewState": "AQIAAEoAAAAAAAAAAAAIwFEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T15:33:31.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T15:33:31.467Z"
             },
             {
               "$type": "Document",
@@ -253,8 +239,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Models\\ViewModel\\TaskDetailListViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:16:48.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T13:16:48.524Z"
             },
             {
               "$type": "Document",
@@ -266,8 +251,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Models\\ViewModel\\MemberDetailViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T13:11:02.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T13:11:02.3Z"
             },
             {
               "$type": "Document",
@@ -279,8 +263,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:54:38.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:54:38.09Z"
             },
             {
               "$type": "Document",
@@ -292,8 +275,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Models\\MemberDetail.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-07T12:54:48.538Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:54:48.538Z"
             },
             {
               "$type": "Document",
@@ -305,8 +287,7 @@
               "RelativeToolTip": "TwnTw-WEB\\Views\\Workspace\\UpdateWorkspace.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-07T12:48:22.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-07T12:48:22.183Z"
             }
           ]
         }
