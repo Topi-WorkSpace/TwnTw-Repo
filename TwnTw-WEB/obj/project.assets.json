@@ -8344,9 +8344,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phan Ky\\Source\\Repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+      "projectUniqueName": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
       "projectName": "TwnTw-WEB",
-      "projectPath": "C:\\Users\\Phan Ky\\Source\\Repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+      "projectPath": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
       "packagesPath": "C:\\Users\\Phan Ky\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Phan Ky\\Source\\Repos\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
       "projectStyle": "PackageReference",
