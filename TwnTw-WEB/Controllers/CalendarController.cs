@@ -22,11 +22,65 @@ namespace TwnTw_WEB.Controllers
             return View();
         }
 
-        public IActionResult Process() { return View(); }
+        public IActionResult Process() 
+        {
+            //Lấy userId từ session
+            Guid userId = Guid.Parse(HttpContext.Session.GetString("UserId"));
+
+            //Lấy danh sách memberDetail và workspace bằng userId
+            List<MemberDetail> memberDetails = _context.MemberDetails.Where(x => x.UserId == userId).Include(a => a.Workspaces).Include(a => a.Users).ToList();
+
+            //Lấy danh sách task theo userId
+            List<TaskDetail> taskDetails = _context.TaskDetails.Where(x => x.UserId == userId).ToList();
+
+            //Tạo list taskListByUserId
+            List<TaskDetailViewModel_ForList> taskListByUserId = new List<TaskDetailViewModel_ForList>();
+            foreach (var item in memberDetails)
+            {
+                TaskDetailViewModel_ForList taskDetailViewModel_ForList = new TaskDetailViewModel_ForList
+                {
+                    workSpace = item.Workspaces,
+                    memberDetail = item,
+                    taskDetails = taskDetails
+                };
+                taskListByUserId.Add(taskDetailViewModel_ForList);
+            }
+
+            return View(taskListByUserId); 
+        }
 
         public IActionResult Chart() { return View(); }
 
-        public IActionResult WorkList() { return View(); }
+        //Controller này trả về view những công việc đang được thực hiện của từng user theo từng workspace
+        public IActionResult WorkList() 
+        {
+            //Lấy userId từ session
+            Guid userId = Guid.Parse(HttpContext.Session.GetString("UserId"));
+
+            //Lấy danh sách memberDetail và workspace bằng userId
+            List<MemberDetail> memberDetails = _context.MemberDetails.Where(x => x.UserId == userId).Include(a => a.Workspaces).Include(a => a.Users).ToList();
+
+            //Lấy task trạng thái processing theo userId
+            List<TaskDetail> taskDetails = _context.TaskDetails.Where(x => x.Status == "Processing" && x.UserId == userId).ToList();
+
+            //Tạo list workListByUserId
+            List<TaskDetailViewModel_ForList> workListByUserId = new List<TaskDetailViewModel_ForList>();
+
+            //Thêm thông tin vào list workListByUserId
+            foreach (var item in memberDetails)
+            {
+                TaskDetailViewModel_ForList taskDetailViewModel_ForList = new TaskDetailViewModel_ForList
+                {
+                    workSpace = item.Workspaces,
+                    memberDetail = item,
+                    taskDetails = taskDetails
+                };
+                //Add vào list workListByUserId
+                workListByUserId.Add(taskDetailViewModel_ForList);
+            }
+
+            return View(workListByUserId); 
+        }
 
 
         //Controller này trả view những công việc đã hoàn thành của từng user theo từng workspace
@@ -42,15 +96,15 @@ namespace TwnTw_WEB.Controllers
             List<TaskDetail> taskDetails = _context.TaskDetails.Where(x => x.Status == "Done" && x.UserId == userId).ToList();
 
             //Tạo list doneListByUserId
-            List<TaskDetailViewModel_ForDoneList> doneListByUserId = new List<TaskDetailViewModel_ForDoneList>();
+            List<TaskDetailViewModel_ForList> doneListByUserId = new List<TaskDetailViewModel_ForList>();
             //Thêm thông tin vào list doneListByUserId
             foreach (var item in memberDetails)
             {
-                TaskDetailViewModel_ForDoneList taskDetailViewModel_ForDoneList = new TaskDetailViewModel_ForDoneList
+                TaskDetailViewModel_ForList taskDetailViewModel_ForDoneList = new TaskDetailViewModel_ForList
                 {
                     workSpace = item.Workspaces,
                     memberDetail = item,
-                    taskDetails = taskDetails.Where(a => a.UserId == item.UserId).ToList()
+                    taskDetails = taskDetails
                 };
                 //Add vào list doneListByUserId
                 doneListByUserId.Add(taskDetailViewModel_ForDoneList);
