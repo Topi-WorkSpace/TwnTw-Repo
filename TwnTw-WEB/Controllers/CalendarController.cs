@@ -61,7 +61,7 @@ namespace TwnTw_WEB.Controllers
             List<MemberDetail> memberDetails = _context.MemberDetails.Where(x => x.UserId == userId).Include(a => a.Workspaces).Include(a => a.Users).ToList();
 
             //Lấy task trạng thái processing theo userId
-            List<TaskDetail> taskDetails = _context.TaskDetails.Where(x => x.Status == "Processing" && x.UserId == userId).ToList();
+            List<TaskDetail> taskDetails = _context.TaskDetails.Where(x => x.Status == "Proccessing" && x.UserId == userId).ToList();
 
             //Tạo list workListByUserId
             List<TaskDetailViewModel_ForList> workListByUserId = new List<TaskDetailViewModel_ForList>();

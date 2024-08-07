@@ -50,7 +50,7 @@
                 @{
                     //Lấy số lượng công việc đã hoàn thanh, đang thực hiện, trễ
                     ViewBag.Done = workSpace.taskDetails.Where(a => a.Status == "Done").Count();
-                    ViewBag.Processing = workSpace.taskDetails.Where(a => a.Status == "Processing").Count();
+                    ViewBag.Processing = workSpace.taskDetails.Where(a => a.Status == "Proccessing").Count();
                     ViewBag.Late = workSpace.taskDetails.Where(a => a.Status == "Late").Count();
                     ViewBag.TaskQuantity = workSpace.taskDetails.Count();
                     //Lấy tên người nhận công việc
