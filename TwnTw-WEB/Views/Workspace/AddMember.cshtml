@@ -10,10 +10,7 @@
         <button type="submit" class="btn btn-primary">Thêm vào dự án</button>
     </form>
 
-    @if (TempData["Notify"] != null)
-    {
-        <div class="alert alert-danger container">
-            TempData["Notify"] = "Không có người dùng này";
-        </div>
-    }
+    <div class="mt-2 mb-2">
+        <a class="btn btn-outline-secondary" asp-action="IntoWS" asp-route-id="@Model.WSId">Trở về Workspace</a>
+    </div>
 </div>

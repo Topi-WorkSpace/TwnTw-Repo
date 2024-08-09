@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
+using AutoMapper.Execution;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections;
+using System.Threading.Tasks;
 using TwnTw_WEB.Data;
 using TwnTw_WEB.DTO_Models;
 using TwnTw_WEB.Models;
@@ -111,6 +113,15 @@ namespace TwnTw_WEB.Controllers
                 TempData["Error"] = "Hãy nhập mã của work space";
                 return View();
             }
+
+            var eWS = await _context.Workspaces.FirstOrDefaultAsync(ws => ws.WSId == Guid.Parse(wSId));
+
+            if (eWS == null)
+            {
+                TempData["Error"] = "Work space này không tồn tại";
+                return View();
+            }
+
             var userId = HttpContext.Session.GetString("UserId");
 
             MemberDetail memberDetail = new MemberDetail
@@ -139,6 +150,7 @@ namespace TwnTw_WEB.Controllers
                                where member.WorkSpaceId == id
                                select new TwnTw_WEB.Models.ViewModel.MemberDetailViewModel
                                {
+                                   MemberDetailsId = member.MemberDetailId,
                                    UserName = user.UserName,
                                    Email = user.Email,
                                    UserId = user.UserId,
@@ -149,25 +161,30 @@ namespace TwnTw_WEB.Controllers
                                }).ToListAsync();
 
             var listTask = await (from task in _context.TaskDetails
-                            join user in _context.Users
-                            on task.UserId equals user.UserId
-                            join memberD in _context.MemberDetails
-                            on user.UserId equals memberD.UserId
-                            where memberD.WorkSpaceId == id
-                            select new TaskDetailListViewModel
-                            {
-                                TaskDetailId = task.TaskDetailId,
-                                UserId = user.UserId,
-                                UserName = user.UserName,
-                                Description = task.Description,
-                                Status = task.Status,
-                                CreatedDate = task.CreatedDate,
-                                EndDate = task.EndDate,
-                            }).ToListAsync();
+                                  join user in _context.Users
+                                  on task.UserId equals user.UserId
+                                  join memberD in _context.MemberDetails
+                                  on new { user.UserId, WorkSpaceId = id } equals new { memberD.UserId, memberD.WorkSpaceId }
+                                  where memberD.WorkSpaceId == id
+                                  select new TaskDetailListViewModel
+                                  {
+                                      WSId = task.WorkSpaceId,
+                                      MemberDetailId = memberD.MemberDetailId,
+                                      TaskDetailId = task.TaskDetailId,
+                                      UserId = user.UserId,
+                                      UserName = user.UserName,
+                                      Description = task.Description,
+                                      Status = task.Status,
+                                      CreatedDate = task.CreatedDate,
+                                      StartDate = task.StartDate,
+                                      EndDate = task.EndDate,
+                                  }).ToListAsync();
 
-            ViewBag.ListTask = listTask;
+            var filteredList = listTask.Where(item => item.WSId == id)
+                                       .OrderByDescending(item => item.EndDate)
+                                       .ToList();
 
-
+            ViewBag.ListTask = filteredList;
 
             return View(members);
         }
@@ -180,7 +197,7 @@ namespace TwnTw_WEB.Controllers
 
             if (user.Role != "Leader")
             {
-                TempData["Notify"] = "Bạn không có quyên này";
+                TempData["error"] = "Bạn không có quyền này";
                 return RedirectToAction("IntoWS", new { id = user.WorkSpaceId });
             }
             else
@@ -189,12 +206,43 @@ namespace TwnTw_WEB.Controllers
             }
         }
 
+        /*public async Task<IActionResult> Assign(string userId, string WSId)
+        {
+            var assineeId = HttpContext.Session.GetString("UserId");
+
+            if (string.IsNullOrEmpty(assineeId) || string.IsNullOrEmpty(WSId))
+            {
+                TempData["error"] = "Dữ liệu không hợp lệ.";
+                return RedirectToAction("Index"); // Hoặc trang lỗi phù hợp
+            }
+
+            var user = await _context.MemberDetails
+                .FirstOrDefaultAsync(m => m.UserId == Guid.Parse(assineeId) && m.WorkSpaceId == Guid.Parse(WSId));
+
+            if (user == null)
+            {
+                TempData["error"] = "Người dùng không tìm thấy.";
+                return RedirectToAction("IntoWS", new { id = Guid.Parse(WSId) });
+            }
+
+            if (user.Role != "Leader")
+            {
+                TempData["error"] = "Bạn không có quyền này.";
+                return RedirectToAction("IntoWS", new { id = user.WorkSpaceId });
+            }
+            else
+            {
+                return View(); // Đảm bảo rằng View tương ứng tồn tại
+            }
+        }*/
+
         [HttpPost]
         public async Task<IActionResult> Assign(TaskDetail task, string WSId, string userId)
         {
             task.TaskDetailId = Guid.NewGuid();
             task.UserId = Guid.Parse(userId);
             task.CreatedDate = DateTime.Now;
+            task.WorkSpaceId = Guid.Parse(WSId);
             await _context.AddAsync(task);
             await _context.SaveChangesAsync();
 
@@ -216,7 +264,7 @@ namespace TwnTw_WEB.Controllers
 
             if (findUser.Role != "Leader")
             {
-                TempData["Notify"] = "Bạn không có quyền này";
+                TempData["error"] = "Bạn không có quyền này";
                 return RedirectToAction("IntoWS", new { id = WSId });
             }
 
@@ -230,7 +278,7 @@ namespace TwnTw_WEB.Controllers
 
             if (user == null)
             {
-                TempData["Notify"] = "Không có người dùng này";
+                TempData["error"] = "Không có người dùng này";
                 return RedirectToAction("AddMember", new { WSId = model.WSId });
             }
 
@@ -247,5 +295,166 @@ namespace TwnTw_WEB.Controllers
 
             return RedirectToAction("IntoWS", new { id = model.WSId });
         }
+
+        public async Task<IActionResult> CompleteTask(string taskId, string wSId)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+
+            var findUser = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(userId));
+
+            if (findUser.Role != "Leader")
+            {
+                TempData["error"] = "Bạn không có quyền này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            var task = await _context.TaskDetails.FirstOrDefaultAsync(t => t.TaskDetailId == Guid.Parse(taskId));
+
+            task.Status = "Done";
+
+            _context.TaskDetails.Update(task);
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("IntoWS", new { id = wSId });
+        }
+
+        public async Task<IActionResult> ReportComplete(string taskId, string wSId, string userId)
+        {
+            var userLogining = HttpContext.Session.GetString("UserId");
+
+            if (userLogining != userId)
+            {
+                TempData["error"] = "Đây không phải công việc của bạn";
+                return RedirectToAction("IntoWS",new { id = wSId });
+            }
+
+            var task = await _context.TaskDetails.FirstOrDefaultAsync(t => t.TaskDetailId == Guid.Parse(taskId));
+
+            if (task == null)
+            {
+                TempData["error"] = "Không có công việc hoặc ai đó đã xóa công việc này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            task.Status = "DoneProccess";
+
+            _context.TaskDetails.Update(task);
+
+            await _context.SaveChangesAsync();
+
+            TempData["success"] = "Đã báo cáo công việc thành công";
+
+            return RedirectToAction("IntoWS", new { id = wSId });
+        }
+
+        public async Task<IActionResult> TeminateTask(string taskId, string wSId)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+
+            var findUser = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(userId));
+
+            if (findUser.Role != "Leader")
+            {
+                TempData["error"] = "Bạn không có quyền này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            var task = await _context.TaskDetails.FirstOrDefaultAsync(t => t.TaskDetailId == Guid.Parse(taskId));
+
+            if (task == null)
+            {
+                TempData["error"] = "Không có công việc hoặc ai đó đã xóa công việc này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            _context.TaskDetails.Remove(task);
+            await _context.SaveChangesAsync();
+            TempData["success"] = "Xóa công việc thành công";
+            return RedirectToAction("IntoWS", new { id = wSId });
+
+        }
+
+        public async Task<IActionResult> UpdateTask(string taskId, string wSId)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+
+            var findUser = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(userId));
+
+            if (findUser.Role != "Leader")
+            {
+                TempData["error"] = "Bạn không có quyền này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            var task = await _context.TaskDetails.FirstOrDefaultAsync(t => t.TaskDetailId == Guid.Parse(taskId));
+
+            if (task == null)
+            {
+                TempData["error"] = "Không có task hoặc ai đó đã xóa task này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            return View(task);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateTask(TaskDetail task,string taskId, string wSId, string userId)
+        {
+            var taskE = await _context.TaskDetails.FirstOrDefaultAsync(t => t.TaskDetailId == Guid.Parse(taskId));
+
+            if (taskE == null)
+            {
+                TempData["error"] = "Không có task hoặc ai đó đã xóa task này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            taskE.Status = task.Status;
+            taskE.Description = task.Description;
+            taskE.EndDate = task.EndDate;
+
+            _context.Update(taskE);
+            await _context.SaveChangesAsync();
+
+            TempData["success"] = "Cập nhật công việc thành công";
+            return RedirectToAction("IntoWS", new { id = wSId });
+
+        }
+
+        public async Task<IActionResult> TerminateMember(string memberDetailId, string wSId, string taskId)
+        {
+
+            var userId = HttpContext.Session.GetString("UserId");
+
+            var findUser = await _context.MemberDetails.FirstOrDefaultAsync(m => m.UserId == Guid.Parse(userId) && m.WorkSpaceId == Guid.Parse(wSId));
+
+            if (findUser.Role != "Leader")
+            {
+                TempData["error"] = "Bạn không có quyền này";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            var member = await _context.MemberDetails.FirstOrDefaultAsync(m => m.MemberDetailId == Guid.Parse(memberDetailId));
+
+            if (member.Role == "Leader" && member.WorkSpaceId == Guid.Parse(wSId) && Guid.Parse(userId) == member.UserId)
+            {
+                TempData["error"] = "Bạn không thể tự xóa chính mình";
+                return RedirectToAction("IntoWS", new { id = wSId });
+            }
+
+            if (member != null)
+            {
+                _context.MemberDetails.Remove(member);
+                await _context.SaveChangesAsync();
+
+                TempData["success"] = "Đã xóa thành viên";
+                return RedirectToAction("IntoWS",new { id = wSId});
+            }
+
+            TempData["error"] = "Xóa thất bại";
+            return RedirectToAction("IntoWS", new { id = wSId });
+        }
+
+
     }
 }

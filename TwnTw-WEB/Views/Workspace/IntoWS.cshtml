@@ -4,20 +4,21 @@
     <div class="">
         <div>
         <div><h2>Work Space: @Model.FirstOrDefault().WSName</h2> </div>
-            <div class="badge bg-success"> Work Space Id : @Model.FirstOrDefault().WSId</div>
+            <div class="badge bg-info"> Work Space Id : @Model.FirstOrDefault().WSId</div>
         </div>
         <div class="m-2">
-            <a class="btn btn-success" asp-action="AddMember" asp-controller="Workspace" asp-route-WSId="@Model.FirstOrDefault().WSId"> Thêm thành viên</a>
-        @if (TempData["Notify"] != null)
+            <a class="btn btn-success mt-2 mb-2" asp-action="AddMember" asp-controller="Workspace" asp-route-WSId="@Model.FirstOrDefault().WSId"> Thêm thành viên</a>
+        @* @if (TempData["Notify"] != null || TempData["Notify"] == string.Empty)
         {
             <div class="alert alert-danger container">
                 @TempData["Notify"]
             </div>
-        }
+        } *@
         </div>
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <td>Mã thành viên</td>
                     <td>Email liên hệ</td>
                     <td>Tên thành viên </td>
                     <td>Trạng thái</td>
@@ -29,12 +30,20 @@
             @foreach (var m in Model)
             {
                 <tr>
+                    <td>@m.MemberDetailsId</td>
                     <td>@m.Email</td>
                     <td>@m.UserName</td>
                     <td>@m.Status</td>
                     <td>@m.Role</td>
                     <td><a asp-action="Assign" asp-controller="Workspace" class="btn btn-success" asp-route-userId="@m.UserId" asp-route-WSId="@Model.FirstOrDefault().WSId">Gán công việc</a></td>
-                    <td><a asp-action="Terminate" asp-controller="Workspace" class="btn btn-danger" asp-route-userId="@m.UserId" asp-route-WSId="@Model.FirstOrDefault().WSId">Loại bỏ thành viên</a></td>
+                    <td>
+                        <a  asp-action="TerminateMember" 
+                            asp-controller="Workspace" 
+                            class="btn btn-danger" 
+                            asp-route-memberDetailId="@m.MemberDetailsId" 
+                            asp-route-userId="@m.UserId" 
+                            asp-route-WSId="@Model.FirstOrDefault().WSId">Loại bỏ thành viên</a>
+                    </td>
                 </tr>
             }
             </tbody>
@@ -44,37 +53,225 @@
     <div>
         <h2>Danh sách công việc</h2>
     </div>
-    <div class="row">
-        @{
-        var tasks = ViewBag.ListTask as List<TaskDetailListViewModel>;
-        }
+@{
+    var tasks = ViewBag.ListTask as List<TaskDetailListViewModel>;
+}
+    
     @if (tasks != null)
     {
-        @foreach (var task in tasks)
-        {
-            <div class="col-3">
-                <div class="card rounded-2">
-                    <div class="card-header bg-primary text-white">
-                        <span class="fw-bold">@task.UserName</span>
-                    </div>
-                    <div class="card-body">
-                        <div class="">
-                            <p>Mô tả công việc:</p>
-                            <p>@task.Description</p>
-                        </div>
-                        <div>
-                            <p>Trạng thái: @task.Status</p>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <p>Ngày tạo: @task.CreatedDate</p>
-                        <p>Ngày kết thúc: @task.EndDate</p>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="row mt-3 border border-2 rounded-2 p-0">
+            <div class="bg-success card-header">
+                <h2 class="text-white"><i class="bi bi-check-circle-fill"></i> Công việc đã hoàn thành</h2>
             </div>
-        }
-    }
+            @foreach (var task in tasks)
+            {
+                if (task.Status == "Done")
+                {
+                    <div class="col-3 mt-2 mb-2">
+                        <div class="card rounded-2">
+                            <div class="card-header bg-secondary text-white">
+                                <span class="fw-bold">@task.UserName</span>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <p>Mô tả công việc: @task.Description</p>
+                                </div>
+                                <div>
+                                    <p>Trạng thái: @task.Status</p>
+                                </div>
+                                <div>
+                                    <p>Ngày tạo: @task.CreatedDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày bắt đầu: @task.StartDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày kết thúc: @task.EndDate.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <a class="btn btn-danger"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-action="TeminateTask">Xóa công việc</a>
+                                    <a class="btn btn-primary"
+                                       asp-action="UpdateTask"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-route-userId="@task.UserId">Cập nhật công việc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="row mt-3 border border-2 rounded-2 p-0">
+            <div class="bg-primary card-header">
+                <h2 class="text-white"><i class="bi bi-person-workspace"></i> Công việc đang thực hiện</h2>
+            </div>
+            @foreach (var task in tasks)
+            {
+                if (task.Status == "Proccessing")
+                {
+                    <div class="col-4 mt-2 mb-2">
+                        <div class="card rounded-2">
+                            <div class="card-header bg-secondary text-white">
+                                <span class="fw-bold">@task.UserName</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="">
+                                    <p>Mô tả công việc:</p>
+                                    <p>@task.Description</p>
+                                </div>
+                                <div>
+                                    <p>Trạng thái: @task.Status</p>
+                                </div>
+                                <div>
+                                    <p>Ngày tạo: @task.CreatedDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày bắt đầu: @task.StartDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày kết thúc: @task.EndDate.ToString("dd/MM/yyyy")</p>
+                                </div>
+                                <div>
+                                    <a class="btn btn-info form-control text-white fw-bold"
+                                    asp-route-taskId="@task.TaskDetailId"
+                                    asp-action="ReportComplete"
+                                    asp-route-userId="@task.UserId"
+                                    asp-route-wSId="@Model.FirstOrDefault().WSId">
+                                    <i class="bi bi-check-square-fill"></i> Báo cáo hoàn thành
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <a class="btn btn-success" 
+                                    asp-route-taskId="@task.TaskDetailId" 
+                                    asp-route-wSId="@Model.FirstOrDefault().WSId" 
+                                    asp-action="CompleteTask" 
+                                    asp-controller="Workspace">Hoàn thành</a>
+                                    <a class="btn btn-danger"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-action="TeminateTask">Xóa công việc</a>
+                                    <a class="btn btn-primary"
+                                       asp-action="UpdateTask"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-route-userId="@task.UserId">Cập nhật công việc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="row mt-3 border border-2 rounded-2 p-0">
+            <div class="bg-danger card-header">
+                <h2 class="text-white"><i class="bi bi-exclamation-triangle"></i> Công việc trễ tiến độ</h2>
+            </div>
+            @foreach (var task in tasks)
+            {
+                if (task.Status == "Late")
+                {
+                    <div class="col-4 mt-2 mb-2">
+                        <div class="card rounded-2">
+                            <div class="card-header bg-secondary text-white">
+                                <span class="fw-bold">@task.UserName</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="">
+                                    <p>Mô tả công việc:</p>
+                                    <p>@task.Description</p>
+                                </div>
+                                <div>
+                                    <p> Trạng thái: @task.Status </p>
+                                </div>
+                                <div>
+                                    <p>Ngày tạo: @task.CreatedDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày bắt đầu: @task.StartDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày kết thúc: @task.EndDate.ToString("dd/MM/yyyy")</p>
+                                </div>
+                                <a class="btn btn-info form-control text-white fw-bold"
+                                   asp-route-taskId="@task.TaskDetailId"
+                                   asp-action="ReportComplete"
+                                   asp-route-userId="@task.UserId"
+                                   asp-route-wSId="@Model.FirstOrDefault().WSId">
+                                    <i class="bi bi-check-square-fill"></i> Báo cáo hoàn thành
+                                </a>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <a class="btn btn-success" 
+                                    asp-route-taskId="@task.TaskDetailId" 
+                                    asp-route-wSId="@Model.FirstOrDefault().WSId" 
+                                    asp-action="CompleteTask" 
+                                    asp-controller="Workspace">Hoàn thành</a>
+                                    <a class="btn btn-danger"  
+                                        asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-action="TeminateTask">Xóa công việc</a>
+                                    <a class="btn btn-primary"
+                                       asp-action="UpdateTask"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-route-userId="@task.UserId">Cập nhật công việc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="row mt-3 border border-2 rounded-2 p-0">
+            <div class="bg-info card-header">
+                <h2 class="text-white"><i class="bi bi-card-list"></i> Công việc Đã hoàn thành và đợi duyệt</h2>
+            </div>
+            @foreach (var task in tasks)
+            {
+                if (task.Status == "DoneProccess")
+                {
+                    <div class="col-4 mt-2 mb-2">
+                        <div class="card rounded-2">
+                            <div class="card-header bg-secondary text-white">
+                                <span class="fw-bold">@task.UserName</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="">
+                                    <p>Mô tả công việc:</p>
+                                    <p>@task.Description</p>
+                                </div>
+                                <div>
+                                    <p>Trạng thái: @task.Status</p>
+                                </div>
+                                <div>
+                                    <p>Ngày tạo: @task.CreatedDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày bắt đầu: @task.StartDate.ToString("dd/MM/yyyy")</p>
+                                    <p>Ngày kết thúc: @task.EndDate.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+
+                                    <a class="btn btn-success"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-action="CompleteTask"
+                                       asp-controller="Workspace">Hoàn thành</a>
+                                    <a class="btn btn-primary"
+                                       asp-action="UpdateTask"
+                                       asp-route-taskId="@task.TaskDetailId"
+                                       asp-route-wSId="@Model.FirstOrDefault().WSId"
+                                       asp-route-userId="@task.UserId">Cập nhật công việc</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
     </div>
+    }
+    
+
+
     <div class="text-center mt-2">
         @{
             var userId = Context.Session.GetString("UserId");

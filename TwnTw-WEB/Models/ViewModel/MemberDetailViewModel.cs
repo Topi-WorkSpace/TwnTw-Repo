@@ -2,6 +2,7 @@
 {
     public class MemberDetailViewModel
     {
+        public Guid MemberDetailsId { get; set; }
         public Guid UserId { get; set; }
         public Guid WSId { get; set; }
         public string WSName { get; set; }

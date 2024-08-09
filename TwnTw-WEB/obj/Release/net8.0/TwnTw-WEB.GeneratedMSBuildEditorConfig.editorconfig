@@ -54,7 +54,15 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Home/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfTm90aWZpY2F0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/MemberDetail/CreateMemberDetail.cshtml]
+=======
 [C:/Users/Phan Ky/source/repos/TwnTw-Repo/TwnTw-WEB/Views/MemberDetail/CreateMemberDetail.cshtml]
+>>>>>>> master
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVtYmVyRGV0YWlsXENyZWF0ZU1lbWJlckRldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -66,7 +74,15 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Shared/_Notification.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Ob3RpZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+=======
 [C:/Users/Phan Ky/source/repos/TwnTw-Repo/TwnTw-WEB/Views/Shared/_ValidationScriptsPartial.cshtml]
+>>>>>>> master
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
@@ -126,7 +142,15 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NwYWNlXExpc3RXb3Jrc3BhY2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+<<<<<<< HEAD
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Workspace/UpdateTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NwYWNlXFVwZGF0ZVRhc2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAnCuaNguoiThayYeuDau/TwnTw-Repo/TwnTw-WEB/Views/Workspace/UpdateWorkspace.cshtml]
+=======
 [C:/Users/Phan Ky/source/repos/TwnTw-Repo/TwnTw-WEB/Views/Workspace/UpdateWorkspace.cshtml]
+>>>>>>> master
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV29ya3NwYWNlXFVwZGF0ZVdvcmtzcGFjZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 

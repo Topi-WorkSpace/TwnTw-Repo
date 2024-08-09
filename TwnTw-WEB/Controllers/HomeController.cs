@@ -15,8 +15,8 @@ namespace TwnTw_WEB.Controllers
 
         public IActionResult Index()
         {
-            ViewData["UserName"] = HttpContext.Session.GetString("UserName");
-            
+            /*ViewData["UserName"] = HttpContext.Session.GetString("UserName");*/
+            HttpContext.Session.Clear();
             return View();
         }
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {}
+    "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {
+    "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+        "projectUniqueName": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
         "projectName": "TwnTw-WEB",
-        "projectPath": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
-        "packagesPath": "C:\\Users\\Phan Ky\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Phan Ky\\source\\repos\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
+        "projectPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\TwnTw-WEB.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\DuAnCuaNguoiThayYeuDau\\TwnTw-Repo\\TwnTw-WEB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Phan Ky\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
@@ -95,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
